@@ -31,7 +31,46 @@
             }
         
         }
-        const app = new react()
+        // const app = new react()
+
+
+        function nextJs(){
+            this.server = 'http://127.100:3000'
+            this.project ='Nextjs'
+        }
+
+        
+        nextJs.prototype.handleClick = function(){
+            console.log('Button clicked');
+            console.log(this.server);
+            
+        }
+        
+        // const nextApp = new nextJs()
+        // document
+        // .querySelector('button')
+        // .addEventListener('click',nextApp.handleClick.bind(nextApp))
+
+
+        class shadeCn{
+            constructor(){
+                this.server = 'http://127.100.3000'
+                this.app = 'shade'
+
+                document
+                .querySelector('button')
+                .addEventListener('click',this.onThisClick.bind(this))
+            }
+
+            onThisClick(){
+                console.log('Hello you clicked here');
+                console.log(this.app);
+                
+            }
+        }
+
+        const shadeApp = new shadeCn()
+
     </script>
 </body>
 </html>
