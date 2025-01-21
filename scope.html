@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+
+<body style="background-color: #223241;">
+    <button id="yellow">Yellow</button>
+    <button id="purple">Purple</button>
+    <script>
+        function changeColor(color){
+            
+            console.log('Clicked');
+            return  function(){
+            document.body.style.backgroundColor = color
+            }
+            
+        }
+        document.querySelector('#yellow').addEventListener('click', function(){
+            changeColor('yellow')();}, false)
+        document.querySelector('#purple').addEventListener('click', function(){
+            changeColor('purple')()
+        }, false)
+
+        // We are not writing noral function in addeventListner because it will invoke immediatly without clicking
+    </script>
+</body>
+
+</html>
